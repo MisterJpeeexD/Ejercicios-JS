@@ -38,6 +38,7 @@ print("===> Nivel 2 alcanzado! <===")
 // Ejercicio 4: Mostrar todos los elementos
 print()
 print("Ejercicio 4: Mostrar los elementos de una lista")
+let recorrer
 let numeros = [10,20,30,40,50];
 for(recorrer of numeros){
     print(recorrer)
@@ -46,6 +47,7 @@ for(recorrer of numeros){
 // Ejercicio 5: Sumar numeros
 print()
 print("Ejercicio 5: Sumar los valores dentro de una lista")
+let valor
 let lista = [2,4,6,8];
 let suma = 0;
 for(valor of lista){
@@ -56,6 +58,7 @@ print("La suma es:",suma)
 // Ejercicio 6: Contar mayores de edad
 print()
 print("Ejercicio 6: Contar cuantas personas son mayores de edad")
+let mayoredad
 let edades = [12,18,25,14,30,17];
 let i = 0;
 for(mayoredad of edades){
@@ -116,6 +119,7 @@ print("===> Nivel 4 alcanzado! <===")
 // Ejercicio 10: Numeros pares
 print()
 print("Ejercicio 10: Recorre una array y mostrar solo numeros pares")
+let pares
 let numeros_lista = [1,2,3,4,5,6,7,8];
 print()
 for(pares of numeros_lista){
@@ -128,7 +132,8 @@ for(pares of numeros_lista){
 print()
 print("Ejercicio 10+1: Encontrar numero mas grande en una lista")
 let lista_numeros = [5,9,2,20,1];
-let num_mayor = 0
+let num_mayor = lista_numeros[0]
+let mayor
 for(mayor of lista_numeros){
     if(mayor > num_mayor){
         num_mayor = mayor
@@ -142,6 +147,7 @@ print("Ejercicio 12: Calcular promedio de una lista")
 let notas = [5.5,6.0,4.8,7.0];
 let cant_notas = notas.length
 let promedio = 0;
+let nota
 for(nota of notas){
     promedio += nota    
 }
@@ -156,7 +162,7 @@ print()
 print("Ejercicio 13: Contar letras")
 let nombres = ["Ana","Felipe","Camila","Tomás"]
 nombres.forEach((e, i) => {
-    print(`El nombre ${nombres[i]} tiene ${nombres[i].length}`);
+    print(`El nombre ${e} tiene ${e.length}`);
 });
 
 // Ejercicio 14: Convertir a mayusculas
@@ -175,7 +181,7 @@ print()
 print("Ejercicio 15: Encontrar las palabras que tenga mas de 5 letras")
 let num = 0
 palabras.forEach((e,i) => {
-    if(palabras[i].length >= 5){
+    if(e.length >= 5){
         num++
     }
 })
@@ -195,15 +201,15 @@ let usuarios= [
 ];
 print()
 usuarios.forEach((e,i) => {
-    print(`${usuarios[i].nombre} tiene ${usuarios[i].edad} años`)
+    print(`${e.nombre} tiene ${e.edad} años`)
 })
 
 // Ejercicio 17: Filtrar mayores de edad
 print()
 print("Ejercicio 17: Solo mostrar mayores de edad")
 usuarios.forEach((e,i) => {
-    if(usuarios[i].edad >= 18){
-        print(`${usuarios[i].nombre} es mayor de edad, tiene ${usuarios[i].edad} años`)
+    if(e.edad >= 18){
+        print(`${e.nombre} es mayor de edad, tiene ${e.edad} años`)
     }
 })
 
@@ -214,8 +220,8 @@ print()
 let FindUser = prompt("Ingrese el usuario a buscar: ")
 print()
 usuarios.forEach((e,i) => {
-    if(FindUser == usuarios[i].nombre){
-        print(`Usuario ${usuarios[i].nombre} se encuentra en la lista`)
+    if(FindUser == e.nombre){
+        print(`Usuario ${e.nombre} se encuentra en la lista`)
     }
 })
 
